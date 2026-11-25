@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash icon: same mark as the launcher foreground. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#FFA8A29E" android:pathData="M47.40,46.80 H58.20 A2.40,2.40 0 0 1 60.60,49.20 V57.60 A2.40,2.40 0 0 1 58.20,60.00 H47.40 A2.40,2.40 0 0 1 45.00,57.60 V49.20 A2.40,2.40 0 0 1 47.40,46.80 Z" />
+    <path android:fillColor="#FFF5F5F4" android:pathData="M38.40,61.20 H49.20 A2.40,2.40 0 0 1 51.60,63.60 V72.00 A2.40,2.40 0 0 1 49.20,74.40 H38.40 A2.40,2.40 0 0 1 36.00,72.00 V63.60 A2.40,2.40 0 0 1 38.40,61.20 Z" />
+    <path android:fillColor="#FFD6D3D1" android:pathData="M56.40,61.20 H67.20 A2.40,2.40 0 0 1 69.60,63.60 V72.00 A2.40,2.40 0 0 1 67.20,74.40 H56.40 A2.40,2.40 0 0 1 54.00,72.00 V63.60 A2.40,2.40 0 0 1 56.40,61.20 Z" />
+    <path android:strokeColor="#FFF59E0B" android:strokeWidth="3.60" android:strokeLineCap="round" android:pathData="M32.40,44.40 L75.60,30.00" />
+    <path android:strokeColor="#FFF59E0B" android:strokeWidth="3.60" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M66.60,29.10 L75.60,30.00 L71.40,38.10" />
+</vector>

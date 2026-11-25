@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Shared business rules tests (core)
+        run: ./gradlew :core:jvmTest --stacktrace
+
+      - name: Server tests and build
+        run: ./gradlew :server:test :server:installDist --stacktrace
+
+      - name: Build Android debug APK
+        run: ./gradlew :androidApp:assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: tradeflow-debug-apk
+          path: androidApp/build/outputs/apk/debug/*.apk

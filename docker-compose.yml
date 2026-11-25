@@ -1,0 +1,17 @@
+# Optional: run PostgreSQL in Docker instead of the embedded database.
+#   docker compose up -d
+#   DATABASE_URL=jdbc:postgresql://localhost:5432/tradeflow DB_USER=tradeflow DB_PASSWORD=tradeflow ./gradlew :server:run
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: tradeflow
+      POSTGRES_USER: tradeflow
+      POSTGRES_PASSWORD: tradeflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - tradeflow-data:/var/lib/postgresql/data
+
+volumes:
+  tradeflow-data:
